@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Ensure the script stops on first error
+set -e
+
+# Check if correct number of arguments provided
+if [ "$#" -lt 1 ]; then
+    echo "Usage: gifmaker [options] <input_path>"
+    exit 1
+fi
+
+# Execute the Python script with all provided arguments
+python3 ./gifmaker.py "$@"
